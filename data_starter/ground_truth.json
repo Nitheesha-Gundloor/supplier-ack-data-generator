@@ -1,0 +1,90 @@
+[
+ {
+  "ground_truth_id": "GT-00001",
+  "issue_type": "ACK_REFERS_WRONG_PO_LINE",
+  "entity": "PromiseDate",
+  "record_id": "PRM-ACK-PO-2026-000129-02-X01",
+  "po_id": "PO-2026-000129",
+  "related_record_ids": "ACK-PO-2026-000129-02|PO-2026-000432-L01",
+  "detection_rule": "promise.po_line.po_id <> acknowledgement.po_id",
+  "expected_decision": "QUARANTINE_ROW",
+  "notes": "Promise row on this acknowledgement points to a line of a different PO; excluded from change derivation."
+ },
+ {
+  "ground_truth_id": "GT-00002",
+  "issue_type": "ACK_REFERS_WRONG_PO_LINE",
+  "entity": "PromiseDate",
+  "record_id": "PRM-ACK-PO-2026-000206-02-X01",
+  "po_id": "PO-2026-000206",
+  "related_record_ids": "ACK-PO-2026-000206-02|PO-2026-000254-L01",
+  "detection_rule": "promise.po_line.po_id <> acknowledgement.po_id",
+  "expected_decision": "QUARANTINE_ROW",
+  "notes": "Promise row on this acknowledgement points to a line of a different PO; excluded from change derivation."
+ },
+ {
+  "ground_truth_id": "GT-00003",
+  "issue_type": "OLDER_REVISION_OVERWRITES_NEWER",
+  "entity": "InventoryPlan",
+  "record_id": "PLN-2026-000131",
+  "po_id": "PO-2026-000008",
+  "related_record_ids": "CHG-PO-2026-000008-000003|CHG-PO-2026-000008-000006",
+  "detection_rule": "plan.source_change.revision_no < max revision already applied to same line/change_type",
+  "expected_decision": "REJECT_STALE_REVISION",
+  "notes": "Revision 2 re-applied after revision 3."
+ },
+ {
+  "ground_truth_id": "GT-00004",
+  "issue_type": "OLDER_REVISION_OVERWRITES_NEWER",
+  "entity": "InventoryPlan",
+  "record_id": "PLN-2026-000204",
+  "po_id": "PO-2026-000034",
+  "related_record_ids": "CHG-PO-2026-000034-000004|CHG-PO-2026-000034-000006",
+  "detection_rule": "plan.source_change.revision_no < max revision already applied to same line/change_type",
+  "expected_decision": "REJECT_STALE_REVISION",
+  "notes": "Revision 4 re-applied after revision 6."
+ },
+ {
+  "ground_truth_id": "GT-00005",
+  "issue_type": "PROMISE_DATE_BEFORE_ORDER_DATE",
+  "entity": "PromiseDate",
+  "record_id": "PRM-ACK-PO-2026-000311-01-L02",
+  "po_id": "PO-2026-000311",
+  "related_record_ids": "ACK-PO-2026-000311-01|PO-2026-000311",
+  "detection_rule": "promise.promised_date < purchase_order.order_date",
+  "expected_decision": "REJECT_CHANGE",
+  "notes": "Promised date precedes PO order date; system rule THR-SAN-1 must reject the resulting change."
+ },
+ {
+  "ground_truth_id": "GT-00006",
+  "issue_type": "PROMISE_DATE_BEFORE_ORDER_DATE",
+  "entity": "PromiseDate",
+  "record_id": "PRM-ACK-PO-2026-000374-01-L02",
+  "po_id": "PO-2026-000374",
+  "related_record_ids": "ACK-PO-2026-000374-01|PO-2026-000374",
+  "detection_rule": "promise.promised_date < purchase_order.order_date",
+  "expected_decision": "REJECT_CHANGE",
+  "notes": "Promised date precedes PO order date; system rule THR-SAN-1 must reject the resulting change."
+ },
+ {
+  "ground_truth_id": "GT-00007",
+  "issue_type": "UNAPPROVED_CHANGE_UPDATES_INVENTORY_PLAN",
+  "entity": "InventoryPlan",
+  "record_id": "PLN-2026-001026",
+  "po_id": "PO-2026-000254",
+  "related_record_ids": "CHG-PO-2026-000254-000006",
+  "detection_rule": "plan.source_change.status NOT IN (APPROVED, AUTO_APPROVED)",
+  "expected_decision": "BLOCK_PLAN_UPDATE",
+  "notes": "Change final status = REJECTED; plan nevertheless updated."
+ },
+ {
+  "ground_truth_id": "GT-00008",
+  "issue_type": "UNAPPROVED_CHANGE_UPDATES_INVENTORY_PLAN",
+  "entity": "InventoryPlan",
+  "record_id": "PLN-2026-001691",
+  "po_id": "PO-2026-000497",
+  "related_record_ids": "CHG-PO-2026-000497-000001",
+  "detection_rule": "plan.source_change.status NOT IN (APPROVED, AUTO_APPROVED)",
+  "expected_decision": "BLOCK_PLAN_UPDATE",
+  "notes": "Change final status = PENDING_APPROVAL; plan nevertheless updated."
+ }
+]

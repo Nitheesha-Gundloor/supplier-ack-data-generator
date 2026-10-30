@@ -1,0 +1,266 @@
+{
+ "seed": 20261022,
+ "scale": 0.05,
+ "runs": {
+  "run_A": {
+   "Acknowledgement.csv": {
+    "rows": 750,
+    "sha256": "dc095006c2141807826d581cb5f5d6b34584f4b8e80e60ebc6eb63740b4593cc"
+   },
+   "AppUser.csv": {
+    "rows": 38,
+    "sha256": "9b176f8d4cbc0b5aef856c14c4987e3f06fbbb982e1d39d617154a783233ec6c"
+   },
+   "Approval.csv": {
+    "rows": 677,
+    "sha256": "6fbba5798a4030606ca801cc881a904d4b165a2fd9530fab20f65135cfcec49e"
+   },
+   "ApprovalThreshold.csv": {
+    "rows": 11,
+    "sha256": "b424f84936203622708c24607034d3dd56da66ecb743889f99bec6786a8849ed"
+   },
+   "ChangeImpact.csv": {
+    "rows": 201,
+    "sha256": "37435134a50bb15185bdb2b0a729a76766e07af64e51ef9d53dee007d12c5074"
+   },
+   "ChangeRequest.csv": {
+    "rows": 627,
+    "sha256": "cfc9a347f46353fcc60ef66e527495a44020cfe5057725aae10062bd5b624293"
+   },
+   "InventoryPlan.csv": {
+    "rows": 1691,
+    "sha256": "3351079a173d72d289b0e347e37157b590b9b415f272a4ff907fbebb7702c9e7"
+   },
+   "Item.csv": {
+    "rows": 400,
+    "sha256": "a8b301cdf60b5aa67731999fcccf2e4f19ea4b92597f2807cbd11e92406148ad"
+   },
+   "Notification.csv": {
+    "rows": 1154,
+    "sha256": "5d762ca356c7ca6459fa9a6496f931cc2f92c059cc3405f4b12b04301bf03a80"
+   },
+   "POLine.csv": {
+    "rows": 1186,
+    "sha256": "bdf26acecc497031dcbd8aea293633d342ed58b9a6b38eba5f42b78380bbe9ac"
+   },
+   "POStatusHistory.csv": {
+    "rows": 1721,
+    "sha256": "0f05fbafaf06c57a8973b8f4d41fe7f8f394bca2ff5a33c16c56ce0bbc92296f"
+   },
+   "ProductionOrder.csv": {
+    "rows": 892,
+    "sha256": "b57eef895454945a39e410b4c636de747d6dafdc7e68ad40e769321aa0bbd9ee"
+   },
+   "ProductionOrderSupply.csv": {
+    "rows": 990,
+    "sha256": "fa56c7f36e583380693b860a0052f4372430892159142950fb95881d554e7293"
+   },
+   "PromiseDate.csv": {
+    "rows": 1771,
+    "sha256": "07e7f3a69b55b7ef01a981e9eff65e29ff6c8aabc5b3d386fda44c18c12662c7"
+   },
+   "PurchaseOrder.csv": {
+    "rows": 500,
+    "sha256": "5be3274add82bbb2a25fbd926042307b694cdb0a1ad55168c035d7cb55ae37b6"
+   },
+   "Supplier.csv": {
+    "rows": 18,
+    "sha256": "7b8ad2bdd9ece8886c35c5aba24ba66d817cdf44e307184646c065efed1e6244"
+   },
+   "Warehouse.csv": {
+    "rows": 6,
+    "sha256": "dbeccaa3db741298dcc298f64cadab9ed9cf8fe9fcb1811bb6bca2d4e5979aea"
+   },
+   "data_dictionary.csv": {
+    "rows": 149,
+    "sha256": "2245a3b6ace67e2d5dc88d5da22bd5d710ffc071eea5d156cd6d59afe1da981a"
+   },
+   "ground_truth.csv": {
+    "rows": 8,
+    "sha256": "8468855168182a7e129627c83770ebaba6bd4c629d311fa2461053ecf9ead2d3"
+   },
+   "ground_truth.json": {
+    "rows": null,
+    "sha256": "9bb1dc78d38b32b6c79af4c5d41c7e3282d8d35f1f2682867d624e1d2bae5309"
+   },
+   "schema.sql": {
+    "rows": null,
+    "sha256": "197ea7045054ff107506e78a43d205151603883251b7f28947011cbe4adfa6a7"
+   }
+  },
+  "run_B": {
+   "Acknowledgement.csv": {
+    "rows": 750,
+    "sha256": "dc095006c2141807826d581cb5f5d6b34584f4b8e80e60ebc6eb63740b4593cc"
+   },
+   "AppUser.csv": {
+    "rows": 38,
+    "sha256": "9b176f8d4cbc0b5aef856c14c4987e3f06fbbb982e1d39d617154a783233ec6c"
+   },
+   "Approval.csv": {
+    "rows": 677,
+    "sha256": "6fbba5798a4030606ca801cc881a904d4b165a2fd9530fab20f65135cfcec49e"
+   },
+   "ApprovalThreshold.csv": {
+    "rows": 11,
+    "sha256": "b424f84936203622708c24607034d3dd56da66ecb743889f99bec6786a8849ed"
+   },
+   "ChangeImpact.csv": {
+    "rows": 201,
+    "sha256": "37435134a50bb15185bdb2b0a729a76766e07af64e51ef9d53dee007d12c5074"
+   },
+   "ChangeRequest.csv": {
+    "rows": 627,
+    "sha256": "cfc9a347f46353fcc60ef66e527495a44020cfe5057725aae10062bd5b624293"
+   },
+   "InventoryPlan.csv": {
+    "rows": 1691,
+    "sha256": "3351079a173d72d289b0e347e37157b590b9b415f272a4ff907fbebb7702c9e7"
+   },
+   "Item.csv": {
+    "rows": 400,
+    "sha256": "a8b301cdf60b5aa67731999fcccf2e4f19ea4b92597f2807cbd11e92406148ad"
+   },
+   "Notification.csv": {
+    "rows": 1154,
+    "sha256": "5d762ca356c7ca6459fa9a6496f931cc2f92c059cc3405f4b12b04301bf03a80"
+   },
+   "POLine.csv": {
+    "rows": 1186,
+    "sha256": "bdf26acecc497031dcbd8aea293633d342ed58b9a6b38eba5f42b78380bbe9ac"
+   },
+   "POStatusHistory.csv": {
+    "rows": 1721,
+    "sha256": "0f05fbafaf06c57a8973b8f4d41fe7f8f394bca2ff5a33c16c56ce0bbc92296f"
+   },
+   "ProductionOrder.csv": {
+    "rows": 892,
+    "sha256": "b57eef895454945a39e410b4c636de747d6dafdc7e68ad40e769321aa0bbd9ee"
+   },
+   "ProductionOrderSupply.csv": {
+    "rows": 990,
+    "sha256": "fa56c7f36e583380693b860a0052f4372430892159142950fb95881d554e7293"
+   },
+   "PromiseDate.csv": {
+    "rows": 1771,
+    "sha256": "07e7f3a69b55b7ef01a981e9eff65e29ff6c8aabc5b3d386fda44c18c12662c7"
+   },
+   "PurchaseOrder.csv": {
+    "rows": 500,
+    "sha256": "5be3274add82bbb2a25fbd926042307b694cdb0a1ad55168c035d7cb55ae37b6"
+   },
+   "Supplier.csv": {
+    "rows": 18,
+    "sha256": "7b8ad2bdd9ece8886c35c5aba24ba66d817cdf44e307184646c065efed1e6244"
+   },
+   "Warehouse.csv": {
+    "rows": 6,
+    "sha256": "dbeccaa3db741298dcc298f64cadab9ed9cf8fe9fcb1811bb6bca2d4e5979aea"
+   },
+   "data_dictionary.csv": {
+    "rows": 149,
+    "sha256": "2245a3b6ace67e2d5dc88d5da22bd5d710ffc071eea5d156cd6d59afe1da981a"
+   },
+   "ground_truth.csv": {
+    "rows": 8,
+    "sha256": "8468855168182a7e129627c83770ebaba6bd4c629d311fa2461053ecf9ead2d3"
+   },
+   "ground_truth.json": {
+    "rows": null,
+    "sha256": "9bb1dc78d38b32b6c79af4c5d41c7e3282d8d35f1f2682867d624e1d2bae5309"
+   },
+   "schema.sql": {
+    "rows": null,
+    "sha256": "197ea7045054ff107506e78a43d205151603883251b7f28947011cbe4adfa6a7"
+   }
+  }
+ },
+ "reference": {
+  "Acknowledgement.csv": {
+   "rows": 750,
+   "sha256": "dc095006c2141807826d581cb5f5d6b34584f4b8e80e60ebc6eb63740b4593cc"
+  },
+  "AppUser.csv": {
+   "rows": 38,
+   "sha256": "9b176f8d4cbc0b5aef856c14c4987e3f06fbbb982e1d39d617154a783233ec6c"
+  },
+  "Approval.csv": {
+   "rows": 677,
+   "sha256": "6fbba5798a4030606ca801cc881a904d4b165a2fd9530fab20f65135cfcec49e"
+  },
+  "ApprovalThreshold.csv": {
+   "rows": 11,
+   "sha256": "b424f84936203622708c24607034d3dd56da66ecb743889f99bec6786a8849ed"
+  },
+  "ChangeImpact.csv": {
+   "rows": 201,
+   "sha256": "37435134a50bb15185bdb2b0a729a76766e07af64e51ef9d53dee007d12c5074"
+  },
+  "ChangeRequest.csv": {
+   "rows": 627,
+   "sha256": "cfc9a347f46353fcc60ef66e527495a44020cfe5057725aae10062bd5b624293"
+  },
+  "InventoryPlan.csv": {
+   "rows": 1691,
+   "sha256": "3351079a173d72d289b0e347e37157b590b9b415f272a4ff907fbebb7702c9e7"
+  },
+  "Item.csv": {
+   "rows": 400,
+   "sha256": "a8b301cdf60b5aa67731999fcccf2e4f19ea4b92597f2807cbd11e92406148ad"
+  },
+  "Notification.csv": {
+   "rows": 1154,
+   "sha256": "5d762ca356c7ca6459fa9a6496f931cc2f92c059cc3405f4b12b04301bf03a80"
+  },
+  "POLine.csv": {
+   "rows": 1186,
+   "sha256": "bdf26acecc497031dcbd8aea293633d342ed58b9a6b38eba5f42b78380bbe9ac"
+  },
+  "POStatusHistory.csv": {
+   "rows": 1721,
+   "sha256": "0f05fbafaf06c57a8973b8f4d41fe7f8f394bca2ff5a33c16c56ce0bbc92296f"
+  },
+  "ProductionOrder.csv": {
+   "rows": 892,
+   "sha256": "b57eef895454945a39e410b4c636de747d6dafdc7e68ad40e769321aa0bbd9ee"
+  },
+  "ProductionOrderSupply.csv": {
+   "rows": 990,
+   "sha256": "fa56c7f36e583380693b860a0052f4372430892159142950fb95881d554e7293"
+  },
+  "PromiseDate.csv": {
+   "rows": 1771,
+   "sha256": "07e7f3a69b55b7ef01a981e9eff65e29ff6c8aabc5b3d386fda44c18c12662c7"
+  },
+  "PurchaseOrder.csv": {
+   "rows": 500,
+   "sha256": "5be3274add82bbb2a25fbd926042307b694cdb0a1ad55168c035d7cb55ae37b6"
+  },
+  "Supplier.csv": {
+   "rows": 18,
+   "sha256": "7b8ad2bdd9ece8886c35c5aba24ba66d817cdf44e307184646c065efed1e6244"
+  },
+  "Warehouse.csv": {
+   "rows": 6,
+   "sha256": "dbeccaa3db741298dcc298f64cadab9ed9cf8fe9fcb1811bb6bca2d4e5979aea"
+  },
+  "data_dictionary.csv": {
+   "rows": 149,
+   "sha256": "2245a3b6ace67e2d5dc88d5da22bd5d710ffc071eea5d156cd6d59afe1da981a"
+  },
+  "ground_truth.csv": {
+   "rows": 8,
+   "sha256": "8468855168182a7e129627c83770ebaba6bd4c629d311fa2461053ecf9ead2d3"
+  },
+  "ground_truth.json": {
+   "rows": null,
+   "sha256": "9bb1dc78d38b32b6c79af4c5d41c7e3282d8d35f1f2682867d624e1d2bae5309"
+  },
+  "schema.sql": {
+   "rows": null,
+   "sha256": "197ea7045054ff107506e78a43d205151603883251b7f28947011cbe4adfa6a7"
+  }
+ },
+ "identical": true,
+ "files_compared": 21
+}

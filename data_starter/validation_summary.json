@@ -1,0 +1,507 @@
+{
+ "dataset": "data_starter",
+ "checks_total": 53,
+ "checks_passed": 53,
+ "checks_failed": 0,
+ "results": [
+  {
+   "group": "structure",
+   "check": "CSV load with PK/UNIQUE/NOT NULL/enum CHECK constraints (primary-key uniqueness, allowed enums)",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "structure",
+   "check": "Foreign-key integrity (all joins valid, all tables)",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "ID format PurchaseOrder.po_id",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "ID format Acknowledgement.ack_id",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "ID format ChangeRequest.change_id",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "ID format Approval.approval_id",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "ID format Notification.notification_id",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "ID format POLine.po_line_id",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "ID format InventoryPlan.plan_event_id",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "ID format ProductionOrder.prod_order_id",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "ACK id embeds PO id and revision",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "APR id = APR-<change_id>-<step>",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "ids",
+   "check": "CHG id embeds PO id",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "ack_received_at >= PO sent_at",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "Ack revisions contiguous and time-ordered",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "Exactly one latest ack per PO and it is the max revision",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "POLine requested_date > PO order_date",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "Change created_at > source ack time; closed_at >= created_at",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "Approval decided_at >= requested_at",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "Plan versions contiguous (effective_to = next effective_from; versions 1..n)",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "Exactly one current plan version per line",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "Production-order start >= every required_date; required_date >= line requested_date",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "Notification/approval/status events not after as-of",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "dates",
+   "check": "PO status history time-ordered, from_status chains",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "arithmetic",
+   "check": "POLine.line_value = qty*price",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "arithmetic",
+   "check": "PO total/line_count = sum of lines",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "arithmetic",
+   "check": "Promise: accepted+rejected = ordered (own-PO lines)",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "arithmetic",
+   "check": "Promise line status consistent with quantities",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "arithmetic",
+   "check": "Ack totals = sum of own-PO promise rows",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "arithmetic",
+   "check": "Acknowledgement status consistent with promise rows",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "arithmetic",
+   "check": "Promise derived deltas (date delta, price pct)",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "arithmetic",
+   "check": "Change deltas recompute from requested/proposed values",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "arithmetic",
+   "check": "Change required_level matches documented thresholds",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "Change status vs approval trail (APPROVED needs final APPROVED step; AUTO needs SYSTEM approval; REJECTED needs a REJECTED step; SUPERSEDED/PENDING need matching step)",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "Approval chain shape: MANAGER-level changes have planner step 1 then ops-manager step 2; PLANNER-level have 1 planner step",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "SUPERSEDED changes have a later revision of the same PO",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "Only one open change per (line,type) is possible: no PENDING change with a later revision for same line/type",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "No duplicate change for same (ack, line, type)",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "No duplicate promise for same (ack, line) among valid rows",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "No duplicate plan version per line",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "Production-order supply: sum(required_qty) per line <= ordered_qty",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "PO current_status equals last POStatusHistory.to_status",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "SLA breach => NO_RESPONSE or ack notified: every PO silent at due time has SUPPLIER_SILENCE notification",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "Downstream impact identified: approved changes with impacts have SCHEDULE_IMPACT notification per impacted production order",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "has_downstream_impact flag matches ChangeImpact rows",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "Non-approved changes (rejected/pending/superseded) trigger no SCHEDULE_IMPACT notification",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "anomaly_detection",
+   "check": "Detection rule for UNAPPROVED_CHANGE_UPDATES_INVENTORY_PLAN flags exactly the ground-truth rows",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "anomaly_detection",
+   "check": "Detection rule for ACK_REFERS_WRONG_PO_LINE flags exactly the ground-truth rows",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "anomaly_detection",
+   "check": "Detection rule for PROMISE_DATE_BEFORE_ORDER_DATE flags exactly the ground-truth rows",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "anomaly_detection",
+   "check": "Detection rule for OLDER_REVISION_OVERWRITES_NEWER flags exactly the ground-truth rows",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "Only approved changes affect plans: current plan == requested values + approved changes (lines without injected anomalies)",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "Plan effective_from >= final approval time of its source change (excluding labelled anomalies)",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  },
+  {
+   "group": "lifecycle",
+   "check": "Revision history preserved: every ack revision < latest still present with its promise rows",
+   "violations": 0,
+   "status": "PASS",
+   "sample": []
+  }
+ ],
+ "anomaly_detection": [
+  {
+   "issue_type": "UNAPPROVED_CHANGE_UPDATES_INVENTORY_PLAN",
+   "ground_truth": 2,
+   "detected": 2,
+   "true_pos": 2,
+   "false_pos": 0,
+   "false_neg": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "issue_type": "ACK_REFERS_WRONG_PO_LINE",
+   "ground_truth": 2,
+   "detected": 2,
+   "true_pos": 2,
+   "false_pos": 0,
+   "false_neg": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "issue_type": "PROMISE_DATE_BEFORE_ORDER_DATE",
+   "ground_truth": 2,
+   "detected": 2,
+   "true_pos": 2,
+   "false_pos": 0,
+   "false_neg": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "issue_type": "OLDER_REVISION_OVERWRITES_NEWER",
+   "ground_truth": 2,
+   "detected": 2,
+   "true_pos": 2,
+   "false_pos": 0,
+   "false_neg": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  }
+ ],
+ "profile": {
+  "row_counts": {
+   "ApprovalThreshold": 11,
+   "AppUser": 38,
+   "Warehouse": 6,
+   "Supplier": 18,
+   "Item": 400,
+   "PurchaseOrder": 500,
+   "POLine": 1186,
+   "Acknowledgement": 750,
+   "PromiseDate": 1771,
+   "ChangeRequest": 627,
+   "Approval": 677,
+   "InventoryPlan": 1691,
+   "ProductionOrder": 892,
+   "ProductionOrderSupply": 990,
+   "ChangeImpact": 201,
+   "Notification": 1154,
+   "POStatusHistory": 1721
+  },
+  "po_status": {
+   "CONFIRMED_WITH_CHANGES": 197,
+   "CONFIRMED": 197,
+   "PARTIALLY_CONFIRMED": 79,
+   "NO_RESPONSE": 26,
+   "CHANGE_PENDING_APPROVAL": 1
+  },
+  "ack_status": {
+   "ACCEPTED_WITH_CHANGES": 333,
+   "ACCEPTED": 275,
+   "PARTIALLY_ACCEPTED": 141,
+   "REJECTED": 1
+  },
+  "acks_per_po": {
+   "1": 318,
+   "2": 88,
+   "3": 42,
+   "4": 10,
+   "5": 6,
+   "6": 10
+  },
+  "pos_without_ack": 26,
+  "change_type": {
+   "DATE": 434,
+   "PRICE": 71,
+   "QTY": 122
+  },
+  "change_level": {
+   "AUTO": 288,
+   "MANAGER": 67,
+   "PLANNER": 270,
+   "SYSTEM_REJECT": 2
+  },
+  "change_status": {
+   "AUTO_APPROVED": 288,
+   "APPROVED": 276,
+   "REJECTED": 36,
+   "SUPERSEDED": 26,
+   "PENDING_APPROVAL": 1
+  },
+  "changes_with_downstream_impact": 171,
+  "notifications": {
+   "INBOUND_RESCHEDULE": 501,
+   "APPROVAL_REQUIRED": 387,
+   "SCHEDULE_IMPACT": 160,
+   "SUPPLIER_SILENCE": 70,
+   "CHANGE_REJECTED": 36
+  },
+  "production_schedule_status": {
+   "AT_RISK": 7,
+   "DELAYED": 117,
+   "ON_TRACK": 114,
+   "RELEASED": 654
+  },
+  "tier_silence_rate": {
+   "A": 0.0112,
+   "B": 0.0541,
+   "C": 0.1212
+  },
+  "date_slip_days_buckets": {
+   "1-3": 142,
+   "15+": 36,
+   "4-14": 183,
+   "pull-in": 73
+  }
+ }
+}

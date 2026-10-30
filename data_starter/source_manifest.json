@@ -1,0 +1,31 @@
+{
+ "generator": "generate_data.py",
+ "version": "1.0.0",
+ "command": "python generate_data.py --seed 20261022 --scale 0.05 --out data_starter",
+ "seed": 20261022,
+ "scale": 0.05,
+ "as_of": "2026-10-22T18:00:00",
+ "external_data_used": false,
+ "sources": [],
+ "licensing": "No external or personal data. All values synthetic; names/countries drawn from small hard-coded lists. Public domain reference ideas (ERP PO/ASN schemas) used for schema inspiration only.",
+ "row_counts": {
+  "ApprovalThreshold.csv": 11,
+  "AppUser.csv": 38,
+  "Warehouse.csv": 6,
+  "Supplier.csv": 18,
+  "Item.csv": 400,
+  "PurchaseOrder.csv": 500,
+  "POLine.csv": 1186,
+  "Acknowledgement.csv": 750,
+  "PromiseDate.csv": 1771,
+  "ChangeRequest.csv": 627,
+  "Approval.csv": 677,
+  "InventoryPlan.csv": 1691,
+  "ProductionOrder.csv": 892,
+  "ProductionOrderSupply.csv": 990,
+  "ChangeImpact.csv": 201,
+  "Notification.csv": 1154,
+  "POStatusHistory.csv": 1721,
+  "ground_truth.csv": 8
+ }
+}
