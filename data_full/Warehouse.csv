@@ -1,0 +1,7 @@
+warehouse_id,warehouse_name,region,operator_user_id
+WH-01,Warehouse NA-East,NA-East,USR-301
+WH-02,Warehouse NA-West,NA-West,USR-302
+WH-03,Warehouse EU-Central,EU-Central,USR-303
+WH-04,Warehouse EU-South,EU-South,USR-304
+WH-05,Warehouse APAC-South,APAC-South,USR-305
+WH-06,Warehouse APAC-East,APAC-East,USR-306

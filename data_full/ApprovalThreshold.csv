@@ -1,0 +1,12 @@
+rule_id,change_type,required_level,metric,lower_exclusive,upper_inclusive,unit,description
+THR-DATE-1,DATE,AUTO,abs_days,,3.0000,days,Date change within 3 days of requested date is auto-approved
+THR-DATE-2,DATE,PLANNER,abs_days,3.0000,14.0000,days,Date change of 4-14 days needs planner approval
+THR-DATE-3,DATE,MANAGER,abs_days,14.0000,,days,Date change over 14 days needs planner endorsement + ops manager approval
+THR-QTY-1,QTY,AUTO,shortfall_pct,,5.0000,percent,Quantity shortfall up to 5% of ordered qty is auto-approved
+THR-QTY-2,QTY,PLANNER,shortfall_pct,5.0000,20.0000,percent,Shortfall of 5-20% needs planner approval
+THR-QTY-3,QTY,MANAGER,shortfall_pct,20.0000,,percent,Shortfall over 20% needs planner endorsement + ops manager approval
+THR-PRC-1,PRICE,AUTO,abs_price_pct,,2.0000,percent,Price change within 2% is auto-approved
+THR-PRC-2,PRICE,PLANNER,abs_price_pct,2.0000,10.0000,percent,Price change of 2-10% needs planner approval
+THR-PRC-3,PRICE,MANAGER,abs_price_pct,10.0000,,percent,Price change over 10% needs planner endorsement + ops manager approval
+THR-VAL-1,ANY,MANAGER,abs_line_value_usd,50000.0000,,USD,"Any change moving line value by more than USD 50,000 escalates to ops manager"
+THR-SAN-1,DATE,SYSTEM_REJECT,date_vs_order_date,,0.0000,days,Proposed date earlier than PO order date is rejected by the system
